@@ -1,0 +1,321 @@
+/* Created by Maria Blair, December 2016 for Rent Cafe/Yardi project */
+body {
+
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden !important;
+    margin-bottom: 440px;
+}
+
+main {
+    max-width: 1262px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 60px;
+}
+
+.card {
+    height: 488px;
+    margin-bottom: 20px;
+}
+
+.card .item {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 3px 1px #cccccc;
+    width: 100%;
+    height: 100%;
+}
+
+.card .item.special:after {
+    content: 'SPECIALS';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: 40% 240%;
+    transform: rotate(45deg);
+    box-shadow: 0 0 1px 1px #dddddd;
+    text-align: center;
+    color: #bde113;
+    font-size: .9em;
+    line-height: 2.0em;
+    width: 130px;
+}
+
+.card .item h1 {
+    font-size: 1.35em;
+    text-align: center;
+    padding: 0;
+    margin-top: 3.0em;
+    margin-bottom: .5em;
+    color: #000000;
+    font-weight: 100;
+}
+
+.card .item h2 {
+    text-align: center;
+    font-size: 1em;
+    color: #999;
+    margin: .5em 0 0 0;
+    font-weight: 400;
+}
+
+.card .item figure {
+    margin: 0;
+    text-align: center;
+}
+
+.card .item figure img {
+    max-width: 100%;
+}
+
+.card .item figure figcaption {
+    text-align: center;
+    color: #999;
+    margin-top: 1em;
+}
+
+.card .item figure figcaption .pre {
+    font-size: .8em;
+    padding-right: .5em;
+}
+
+.card .item figure figcaption .price {
+    font-size: 1.2em;
+    color: #0086cf;
+    font-weight: 400;
+}
+
+.card .item figure figcaption .post {
+    font-size: .7em;
+    padding-left: .5em;
+    transform: translateY(-100%);
+    display: inline-block;
+}
+
+.card .item .more {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 1em;
+}
+
+.card .item .more .notes {
+    color: #999999;
+    font-size: .85em;
+    margin: 1em 0 .5em;
+}
+
+.card .item .more .btn {
+    padding: 1em 2em;
+    background-color: #f6f4f7;
+    border-radius: 0;
+    border: #ccc 1px solid;
+}
+
+button.btn.btn-default {
+    color: #999;
+}
+
+#zerorow {
+    border-bottom: 1px solid #ccc;
+}
+
+#resetall, #morefilters, #less {
+    text-align: right;
+}
+
+.btn > .dropdown-toggle {
+    border-radius: 0px;
+}
+
+
+/*   FOOTER   */
+footer {
+    position: fixed;
+    width: 100%;
+    height: 440px;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px 2px #cccccc;
+    font-size: .9em;
+    transition: bottom .5s;
+    overflow-y: scroll;
+    color: #999;
+}
+
+footer.collapsed {
+    bottom: -270px;
+}
+
+footer.expanded {
+    bottom: 0;
+    box-shadow: 0 0 1px 1px #0086cf;
+}
+
+footer.collapsed #zerorow {
+    display: none;
+}
+
+footer.expanded #morefilters {
+    display: none;
+}
+
+footer [class*= col-] {
+    padding-top: .7em;
+
+}
+
+footer .btn-lg, .footer .btn-group-lg > .btn {
+    font-size: 1.1em;
+    padding: 1em 1.2em;
+    border-radius: 0px;
+}
+
+#dropdownMenu1 {
+    border-radius: 0px;
+}
+
+#applyfilters {
+    border-radius: 0px;
+}
+
+/* SLIDER */
+#rent:before, #sqft:before {
+    content: '$500';
+    position: relative;
+    top: 40px;
+    left: -10px;
+}
+
+#rent:after, #sqft:after {
+    content: '$4,000';
+    position: absolute;
+    top: 40px;
+    right: -24px;
+}
+
+#sqft:before {
+    content: '200';
+}
+
+#sqft:after {
+    content: '7,250';
+}
+
+.slider-handle {
+
+    background: #f6f4f7;
+    border: #cccccc 1px solid;
+    width: 2.5em;
+    height: 2em;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #cccccc;
+
+}
+
+.slider-handle:before {
+    content: '||';
+    width: 1.5em;
+    height: 1em;
+    font-size: 1.5em;
+    color: #999999;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.2em;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 3px;
+    margin-top: 1em;
+}
+
+.slider.slider-horizontal .slider-selection {
+    background: #0086cf;
+}
+
+.slider.slider-horizontal .slider-handle {
+    margin-top: -10px;
+}
+
+/* AMENITIES */
+#morefilters {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 99;
+}
+#amenities label{
+    font-weight: 400;
+}
+#amenities.collapsed .more-amenities {
+    display: none;
+
+}
+
+#amenities.expanded .more-amenities {
+    display: block;
+
+}
+
+#amenities.expanded .more {
+    display: none;
+}
+
+#amenities.collapsed .more {
+    display: block;
+}
+
+#amenities.expanded .less {
+    display: block;
+    position: relative;
+    z-index:99;
+}
+
+#amenities.collapsed .less {
+    display: none;
+}
+
+#cancel, #applyfilters {
+    margin-right: 4em;
+    margin-left: 4em;
+}
+
+#cancel {
+    color: black;
+    font-size: 1.1em;
+}
+
+#applyfilters {
+    background-color: black;
+    color: white;
+}
+
+.glyphicon {
+    color: #333;
+}
+
+.glyphicon-ok {
+    color: white;
+}
+
+#zerorow {
+    border-top: 2px, blue;
+}
+
+div.slider.slider-horizontal {
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+}
+
+@media (min-width: 768px) {
+    footer.collapsed {
+        bottom: -350px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    footer.collapsed {
+        bottom: -350px;
+    }
+}

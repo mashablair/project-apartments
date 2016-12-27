@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Created by Maria Blair on December 18, 2016. Project for Yardi/Rent Cafe. -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Apartments for Rent</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+    <link href='css/slider.css' rel='stylesheet'>
+    <link href='css/main.css' rel='stylesheet'>  <!-- Custom CSS -->
+
+</head>
+<body>
+
+<div id="page">
+    <header>
+    </header>
+    <main class="container">
+        <div class="row" id="cards">Loading offers...</div>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer collapsed">
+    <div class="container-fluid">
+
+        <!-- 0 Row -->
+        <div class='row filter-title' id="zerorow">
+            <div class='col-md-6 col-sm-6 col-xs-6'>
+                <p>Filters</p>
+            </div>
+            <div class='col-md-6 col-sm-6 col-xs-6' id="resetall">
+                <a>Reset All</a>
+            </div>
+        </div>
+        <!-- 1st Row -->
+        <div class='row inital-options'>
+
+            <div class='' style="float: right" id="morefilters">
+                <p>
+                <p>
+                    <a><i class="glyphicon glyphicon-filter"></i> MORE FILTERS</a>
+            </div>
+            <div class='col-xs-12 col-sm-4'>
+                <p><i class="glyphicon glyphicon-bed"></i> BEDROOMS
+                <p>
+                <div class="btn-group btn-group-lg" role="group" id="bedrooms">
+                    <button type="button" class="btn btn-default"> Studio</button>
+                    <button type="button" class="btn btn-default"> 1</button>
+                    <button type="button" class="btn btn-default"> 2</button>
+                    <button type="button" class="btn btn-default"> 3+</button>
+                </div>
+            </div>
+
+            <div class='col-xs-12 col-sm-4'>
+                <i class="glyphicon glyphicon-usd"></i> RENT
+
+                <div data-role="main" class="ui-content">
+                    <div id="rent"></div>
+                </div>
+            </div>
+
+            <div class='col-xs-12 col-sm-4'>
+                <p><i class="glyphicon glyphicon-calendar"></i> MOVE IN DATE
+                <p>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Any Timeframe <span
+                            class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Any Timeframe</a></li>
+                        <li><a href="#">Set Date</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Row -->
+        <div class='row'>
+            <div class='col-xs-12 col-sm-4'>
+                <p><i class="glyphicon glyphicon-tint"></i> BATHROOMS
+                <p>
+                <div class="btn-group btn-group-lg" role="group" id="baths">
+                    <button type="button" class="btn btn-default"> Studio</button>
+                    <button type="button" class="btn btn-default"> 1</button>
+                    <button type="button" class="btn btn-default"> 2</button>
+                    <button type="button" class="btn btn-default"> 3+</button>
+                </div>
+            </div>
+
+            <div class='col-xs-12 col-sm-4'>
+                <i class="glyphicon glyphicon-th"></i> SQFT
+                <div data-role="main" class="ui-content">
+                    <div id="sqft"></div>
+                </div>
+            </div>
+
+            <div class='col-xs-12 col-sm-4 collapsed' id="amenities">
+                <i class="glyphicon glyphicon-glass"></i> AMENITIES
+
+                <div class="row">
+                    <label class="col-xs-6 "><input type="checkbox" value="option1"> AIR CONDITIONING</label>
+                    <label class="col-xs-6 "><input type="checkbox" value="option2"> BALCONY</label>
+                </div>
+                <div class="row">
+                    <label class="col-xs-6 "><input type="checkbox" value="option1"> ASSIGNED PARKING</label>
+                    <label class="col-xs-6 "><input type="checkbox" value="option2"> CARPET</label>
+                </div>
+                <div class="more-amenities">
+                    <div class="row">
+                        <label class="col-xs-6"><input type="checkbox" value="option1"> SWIMMING POOL</label>
+                        <label class="col-xs-6"><input type="checkbox" value="option2"> FIREPLACE</label>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6"><input type="checkbox" value="option1"> WIRELESS INTERNET</label>
+                        <label class="col-xs-6"><input type="checkbox" value="option2"> CABLE TELEVISION</label>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6"><input type="checkbox" value="option1"> HOT COFFEE</label>
+                        <label class="col-xs-6"><input type="checkbox" value="option2"> CLIMATE CONTROLLED</label>
+                    </div>
+                    <div class="row">
+                        <label class="col-xs-6"><input type="checkbox" value="option1"> SECURITY SYSTEM</label>
+                        <label class="col-xs-6"><input type="checkbox" value="option2"> TENNIS COURTS</label>
+                    </div>
+
+                </div>
+                <div id="row">
+                    <div class="col-xs-6"></div>
+                    <div class="col-xs-6">
+                        <a class="more"><i class="glyphicon glyphicon-chevron-down"></i> MORE</a>
+                        <a class="less"><i class="glyphicon glyphicon-chevron-up"></i> LESS</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 3rd Row -->
+        <div class='row' id="applyFilter">
+            <div class='col-md-12 col-sm-12 col-xs-6 text-center'>
+                <span><a href="#" id="cancel">Cancel</a></span>
+                <span><button type="button" class="btn btn-default" id="applyfilters"><i class='glyphicon glyphicon-ok'></i> Apply Filters</button></span>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/plans.js"></script>
+<script src='js/bootstrap-slider.js'></script>
+<script src='js/bootstrap.min.js'></script>
+<script src="js/application.js"></script>
+</body>
+</html>
+
