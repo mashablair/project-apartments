@@ -1,6 +1,7 @@
-(function ($) {
+// The Module Pattern
+(function ($) { // here we pass jQuery as an argument to our modules' anonimous function
     "use strict";
-    // Declare our variables:
+    // Declare our local/private variables:
     var header, main, footer,
         cards, rent, sqft, expandFooter, collapseFooter,
         amenities, expandAmenities, collapseAmenities,
@@ -58,7 +59,7 @@
                     btn.addClass('active btn-primary');
                     filterResults.bed = btn.index();
                     commands.filterSelection();
-                })
+                });
             },
 
             // Buttons for 'BATHROOMS'
@@ -70,7 +71,7 @@
                     filterResults.bath = btn.index();
                     filterResults.bath = btn.index();
                     commands.filterSelection();
-                })
+                });
             },
 
             // 'Reset All':
